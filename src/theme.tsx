@@ -31,6 +31,7 @@ const theme = extendTheme({
   },
   colors: {
     blue: "#070D21",
+    purple: "#6C86E7",
     white: {
       100: "#F8F8F9",
     },

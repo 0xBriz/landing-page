@@ -35,7 +35,7 @@ export function Hero() {
           as="h1"
           paddingBottom={6}
           fontWeight={900}
-          fontSize={{ sm: "4xl", lg: "6xl" }}
+          fontSize={{ base: "4xl", lg: "6xl" }}
           textShadow={"0px 2px 0px rgba(0, 0, 0, 0.25)"}
         >
           Amplify your yield farming strategy with the Aequinox Dynamo

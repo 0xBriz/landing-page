@@ -53,8 +53,8 @@ export function DexContainer() {
 
         <Grid
           marginTop="-20%"
-          templateRows={{ sm: "repeat(4, 1fr)", md: "repeat(2, 1fr)" }}
-          templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+          templateRows={{ base: "repeat(4, 1fr)", md: "repeat(2, 1fr)" }}
+          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
           columnGap={8}
           rowGap={6}
         >
