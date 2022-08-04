@@ -53,6 +53,7 @@ export function NavBar() {
         icon={<HamburgerIcon />}
         display={{ md: "none" }}
         bg="whiteAlpha.200"
+        _hover={{ bg: "whiteAlpha.300" }}
       />
 
       <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
