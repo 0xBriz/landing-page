@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { HStack, Heading, Link } from "@chakra-ui/react";
-import aeqLogo from "../../../public/aeq-logo.png";
+import { HStack, Link } from "@chakra-ui/react";
 import { DAppButton } from "../DAppButton";
+import { Logo } from "../Logo";
 
 export function NavBar() {
   return (
     <HStack
+      as="nav"
       width={"100%"}
       paddingY={8}
       paddingX={10}
@@ -15,12 +15,7 @@ export function NavBar() {
       bg="blue"
       zIndex={10}
     >
-      <HStack spacing={2} alignItems={"center"} justifyContent={"center"}>
-        <Image src={aeqLogo} alt="Aequinox logo image" />
-        <Heading as="h2" fontSize={"3xl"}>
-          Aequinox
-        </Heading>
-      </HStack>
+      <Logo />
 
       <HStack flex={1} spacing={16}>
         <Link textStyle="navBarLink">Swap</Link>

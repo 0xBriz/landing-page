@@ -10,6 +10,7 @@ export function Ecosystem() {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
+      marginBottom="144px"
     >
       <Heading
         as="h2"
