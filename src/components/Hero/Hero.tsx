@@ -39,7 +39,7 @@ export function Hero() {
           fontSize={{ base: "4xl", lg: "6xl" }}
           textShadow={"0px 2px 0px rgba(0, 0, 0, 0.25)"}
         >
-          Amplify your yield farming strategy with the Aequinox Dynamo
+          Amplify your yield with the Aequinox Dynamo
         </Heading>
         <Text
           paddingBottom={{ base: 12, md: 8 }}
@@ -47,9 +47,8 @@ export function Hero() {
           maxWidth="860px"
           textShadow={"0px 1px 0px rgba(0, 0, 0, 0.25)"}
         >
-          Diversify your portfolio while boosting your favourite liquidity pools
-          with extra yield through locked staking that gives you the power to
-          vote to increase rewards.
+          Diversify your portfolio and direct emissions to your favourite
+          liquidity pools with veAEQ gauge voting.
         </Text>
 
         <VStack spacing={10}>
