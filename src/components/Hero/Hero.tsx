@@ -22,6 +22,7 @@ export function Hero() {
       height="calc(100vh - 107px)" // 100vh - navbar height
       alignItems="center"
       justifyContent="center"
+      marginBottom="144px"
     >
       <BackgroundVideo />
 
