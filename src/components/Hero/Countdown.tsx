@@ -36,9 +36,9 @@ export function Countdown() {
       </Heading>
 
       <HStack spacing={3}>
-        <CountdownNumber value={duration.days()} />
-        <CountdownNumber value={duration.hours()} />
-        <CountdownNumber value={duration.minutes()} />
+        <CountdownNumber value={duration.days()} label="days" />
+        <CountdownNumber value={duration.hours()} label="hours" />
+        <CountdownNumber value={duration.minutes()} label="minutes" />
       </HStack>
     </VStack>
   );

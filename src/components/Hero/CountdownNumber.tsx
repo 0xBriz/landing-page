@@ -1,4 +1,4 @@
-import { Flex, HStack, Text } from "@chakra-ui/react";
+import { Flex, HStack, Text, VStack } from "@chakra-ui/react";
 
 function Digit({ digit }: { digit: string }) {
   return (
@@ -18,13 +18,22 @@ function Digit({ digit }: { digit: string }) {
   );
 }
 
-export function CountdownNumber({ value }: { value: number }) {
+interface CountdownNumberProps {
+  value: number;
+  label: string;
+}
+
+export function CountdownNumber({ value, label }: CountdownNumberProps) {
   const digits = `${value < 10 ? "0" : ""}${value.toString()}`.split("");
 
   return (
-    <HStack>
-      <Digit digit={digits[0]} />
-      <Digit digit={digits[1]} />
-    </HStack>
+    <VStack>
+      <HStack>
+        <Digit digit={digits[0]} />
+        <Digit digit={digits[1]} />
+      </HStack>
+
+      <Text fontSize={"small"}>{label}</Text>
+    </VStack>
   );
 }
