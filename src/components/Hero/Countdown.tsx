@@ -35,7 +35,7 @@ export function Countdown() {
         Launching
       </Heading>
 
-      <Text fontSize="4xl" fontWeight={900}>
+      <Text fontSize="3xl" fontWeight={900}>
         8th August
       </Text>
 
