@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { HStack, Heading, StackProps } from "@chakra-ui/react";
+import { HStack, StackProps, Flex, Spacer } from "@chakra-ui/react";
 import aeqLogo from "../../../public/aeq-logo.png";
+import aeq from "../../../public/aequinox.svg";
 
 export function Logo(props: StackProps) {
   return (
@@ -10,10 +11,11 @@ export function Logo(props: StackProps) {
       justifyContent={"center"}
       {...props}
     >
-      <Image src={aeqLogo} alt="Aequinox logo image" layout="fixed" />
-      <Heading as="h2" fontSize={"3xl"}>
-        Aequinox
-      </Heading>
+      <Flex justifyContent="center" alignItems="center">
+        <Image src={aeqLogo} alt="Aequinox logo image" layout="fixed" />
+        <Spacer width={2} />
+        <Image src={aeq} alt="Aequinox logo image" layout="fixed" />
+      </Flex>
     </HStack>
   );
 }
