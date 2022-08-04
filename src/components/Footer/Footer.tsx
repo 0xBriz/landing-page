@@ -10,66 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { Logo } from "../Logo";
 
-// function Pages() {
-//   return (
-//     <Grid
-//       templateRows={{ base: "1fr", md: "repeat(5, 1fr)" }}
-//       templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-//       columnGap="5vw"
-//       rowGap={4}
-//     >
-//       <GridItem as={Text} fontWeight={900}>
-//         Aequinox
-//       </GridItem>
-//       <GridItem as={Text} fontWeight={900}>
-//         Core
-//       </GridItem>
-//       <GridItem as={Text} fontWeight={900}>
-//         Social
-//       </GridItem>
-
-//       <GridItem as={Link} isExternal>
-//         Trade
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         Trade
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         Discord
-//       </GridItem>
-
-//       <GridItem as={Link} isExternal>
-//         Invest
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         Invest
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         Twitter
-//       </GridItem>
-
-//       <GridItem as={Link} isExternal>
-//         Stake
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         &nbsp;
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         Telegram
-//       </GridItem>
-
-//       <GridItem as={Link} isExternal>
-//         Docs
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         &nbsp;
-//       </GridItem>
-//       <GridItem as={Link} isExternal>
-//         Medium
-//       </GridItem>
-//     </Grid>
-//   );
-// }
 function Pages() {
   return (
     <Stack

@@ -1,8 +1,25 @@
-import { HStack, Link } from "@chakra-ui/react";
+import { useRef } from "react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  HStack,
+  IconButton,
+  Link,
+  Stack,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
 import { DAppButton } from "../DAppButton";
 import { Logo } from "../Logo";
 
 export function NavBar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <HStack
       as="nav"
@@ -14,16 +31,55 @@ export function NavBar() {
       top={0}
       bg="blue"
       zIndex={10}
+      justifyContent={{ base: "space-between", md: "initial" }}
     >
       <Logo />
 
-      <HStack flex={1} spacing={16}>
+      <HStack flex={1} spacing={16} display={{ base: "none", md: "initial" }}>
         <Link textStyle="navBarLink">Swap</Link>
         <Link textStyle="navBarLink">Invest</Link>
         <Link textStyle="navBarLink">Stake</Link>
       </HStack>
 
-      <DAppButton justifySelf={"flex-end"} />
+      <DAppButton
+        justifySelf={"flex-end"}
+        display={{ base: "none", md: "initial" }}
+      />
+
+      <IconButton
+        onClick={onOpen}
+        justifySelf={"flex-end"}
+        aria-label="Navigation"
+        icon={<HamburgerIcon />}
+        display={{ md: "none" }}
+      />
+
+      <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
+        <DrawerOverlay />
+        <DrawerContent bg="blue">
+          <DrawerCloseButton />
+          <DrawerHeader>&nbsp;</DrawerHeader>
+
+          <DrawerBody>
+            <Stack
+              direction={{ base: "column", sm: "row" }}
+              spacing={{ base: 8, sm: 8 }}
+              paddingX={4}
+              paddingY={2}
+              alignItems="center"
+              justifyContent={{ base: "initial", sm: "space-between" }}
+            >
+              <HStack flex={1} spacing={16}>
+                <Link textStyle="navBarLink">Swap</Link>
+                <Link textStyle="navBarLink">Invest</Link>
+                <Link textStyle="navBarLink">Stake</Link>
+              </HStack>
+
+              <DAppButton justifySelf={"flex-end"} paddingX={3} paddingY={4} />
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </HStack>
   );
 }

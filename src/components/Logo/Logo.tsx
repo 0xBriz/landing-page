@@ -10,7 +10,7 @@ export function Logo(props: StackProps) {
       justifyContent={"center"}
       {...props}
     >
-      <Image src={aeqLogo} alt="Aequinox logo image" />
+      <Image src={aeqLogo} alt="Aequinox logo image" layout="fixed" />
       <Heading as="h2" fontSize={"3xl"}>
         Aequinox
       </Heading>
