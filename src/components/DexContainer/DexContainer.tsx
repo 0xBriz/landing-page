@@ -1,32 +1,24 @@
-import { Flex, Heading, Text, HStack, Grid, Box } from "@chakra-ui/react";
+import { useRef } from "react";
 import Image from "next/image";
+import { Flex, Heading, Grid, Box } from "@chakra-ui/react";
 import dexPreview from "../../../public/dex-preview.png";
 import chartIcon from "../../../public/chart-icon.svg";
 import moneyTransferIcon from "../../../public/money-transfer-icon.svg";
 import transactionsIcon from "../../../public/transactions-icon.svg";
 import bicepIcon from "../../../public/bicep-icon.svg";
-
-function DexReason({ text, icon }: { text: string; icon: any }) {
-  return (
-    <HStack
-      spacing={4}
-      padding={6}
-      bg="gray.900"
-      borderRadius="24px"
-      borderWidth="1px"
-      borderColor="gray.800"
-      boxShadow="0px 2px 24px rgba(96, 43, 30, 0.25)"
-    >
-      <Image src={icon} alt="Chart icon" />
-
-      <Text fontSize="18px" fontWeight={700}>
-        {text}
-      </Text>
-    </HStack>
-  );
-}
+import { useIntersection } from "../../hooks";
+import { DexReason } from "./DexReason";
 
 export function DexContainer() {
+  const intersectionRef = useRef(null);
+  const intersection = useIntersection(intersectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  });
+  const dexInView =
+    intersection !== null && intersection.intersectionRatio >= 0.1;
+
   return (
     <Flex
       as="section"
@@ -52,6 +44,7 @@ export function DexContainer() {
         </Box>
 
         <Grid
+          ref={intersectionRef}
           marginTop="-20%"
           templateRows={{ base: "repeat(4, 1fr)", md: "repeat(2, 1fr)" }}
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
@@ -59,20 +52,28 @@ export function DexContainer() {
           rowGap={6}
         >
           <DexReason
+            index={0}
             text="Amplify liquidity mining yield by up to 250%"
             icon={chartIcon}
+            visible={dexInView}
           />
           <DexReason
+            index={1}
             text="Earn a portion of the Aequinox swap fees"
             icon={moneyTransferIcon}
+            visible={dexInView}
           />
           <DexReason
+            index={2}
             text="Vote to direct rewards to your favourite pools"
             icon={transactionsIcon}
+            visible={dexInView}
           />
           <DexReason
+            index={3}
             text="Flex your voting biceps in protocol governance"
             icon={bicepIcon}
+            visible={dexInView}
           />
         </Grid>
       </Flex>
