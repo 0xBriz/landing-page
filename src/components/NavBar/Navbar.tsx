@@ -52,12 +52,13 @@ export function NavBar() {
         aria-label="Navigation"
         icon={<HamburgerIcon />}
         display={{ md: "none" }}
+        bg="whiteAlpha.200"
       />
 
       <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent bg="blue">
-          <DrawerCloseButton />
+          <DrawerCloseButton color="white" />
           <DrawerHeader>&nbsp;</DrawerHeader>
 
           <DrawerBody>
@@ -69,7 +70,7 @@ export function NavBar() {
               alignItems="center"
               justifyContent={{ base: "initial", sm: "space-between" }}
             >
-              <HStack flex={1} spacing={16}>
+              <HStack flex={1} spacing={16} color="white">
                 <Link textStyle="navBarLink">Swap</Link>
                 <Link textStyle="navBarLink">Invest</Link>
                 <Link textStyle="navBarLink">Stake</Link>
