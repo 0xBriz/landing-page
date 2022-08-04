@@ -9,7 +9,7 @@ export function Hero() {
       as="section"
       position="relative"
       width="100%"
-      height="calc(100vh - 107px)" // 100vh - navbar height
+      minHeight="calc(100vh - 107px)" // 100vh - navbar height
       alignItems="center"
       justifyContent="center"
       marginBottom="144px"

@@ -15,6 +15,7 @@ function BackgroundVideo() {
         autoPlay
         loop
         muted
+        playsInline
         height="100%"
         objectFit={{ base: "cover", sm: "cover" }}
       >
