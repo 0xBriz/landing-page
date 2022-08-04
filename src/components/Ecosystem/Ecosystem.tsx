@@ -8,6 +8,7 @@ export function Ecosystem() {
   return (
     <Flex
       as="section"
+      zIndex={1}
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
