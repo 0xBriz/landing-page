@@ -58,7 +58,7 @@ export function Pools() {
           text="Build on our platform with lower initial capital requirements that scale into higher liquidity across time."
         />
         <PoolCard
-          colSpan={{ base: 1, lg: 2 }}
+          colSpan={{ base: 1, md: 2 }}
           icon={poolsSmart}
           title="Smart Pools"
           text="Create liquidity pools with their own internal logic that act as trustless asset managers."

@@ -7,9 +7,27 @@ import { Hero } from "../components/Hero";
 import { NavBar } from "../components/NavBar";
 import { Pools } from "../components/Pools";
 
+function BackgroundVideo() {
+  return (
+    <Box position="absolute" top={0} left={0} width="100vw" height="100vh">
+      <Box
+        as="video"
+        autoPlay
+        loop
+        muted
+        height="100%"
+        objectFit={{ base: "cover", sm: "cover" }}
+      >
+        <source src="/aeq-video-background.mp4" />
+      </Box>
+    </Box>
+  );
+}
+
 const Index = () => (
   <Container minHeight="100vh" overflow={"hidden"}>
     <NavBar />
+    <BackgroundVideo />
 
     <Flex
       position="relative"

@@ -1,17 +1,7 @@
-import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import { DOCS_HREF } from "../../links";
 import { BigWhiteLink } from "../BigWhiteLink";
 import { Countdown } from "./Countdown";
-
-function BackgroundVideo() {
-  return (
-    <Box position="absolute" top={0} left={0} width="100%" height="100%">
-      <video autoPlay loop muted style={{ height: "100%" }}>
-        <source src="/aeq-video-background.mp4" />
-      </video>
-    </Box>
-  );
-}
 
 export function Hero() {
   return (
@@ -23,9 +13,17 @@ export function Hero() {
       alignItems="center"
       justifyContent="center"
       marginBottom="144px"
+      _after={{
+        content: "''",
+        position: "absolute",
+        bottom: 0,
+        width: "100vw",
+        height: "100px",
+        transform: "translateY(50%)",
+        background:
+          "linear-gradient(180deg, rgba(7,11,37,0) 0%, rgba(7,13,33,0.5004595588235294) 25%, rgba(7,13,33,1) 100%)",
+      }}
     >
-      <BackgroundVideo />
-
       <Flex
         flexDirection="column"
         alignItems={"center"}

@@ -1,19 +1,4 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
-import {
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  HStack,
-  IconButton,
-  Link,
-  Stack,
-  useDisclosure,
-  VStack,
-} from "@chakra-ui/react";
-import { BigWhiteLink } from "../BigWhiteLink";
+import { HStack, useDisclosure } from "@chakra-ui/react";
 import { Logo } from "../Logo";
 
 export function NavBar() {
@@ -28,17 +13,18 @@ export function NavBar() {
       spacing={16}
       position="sticky"
       top={0}
-      bg="blue"
+      bg="transparent"
       zIndex={10}
       justifyContent={{ base: "space-between", md: "initial" }}
     >
       <Logo />
 
-      <HStack flex={1} spacing={16} display={{ base: "none", md: "initial" }}>
+      {/* Hiding this while not live */}
+      {/* <HStack flex={1} spacing={16} display={{ base: "none", md: "initial" }}>
         <Link textStyle="navBarLink">Swap</Link>
         <Link textStyle="navBarLink">Invest</Link>
         <Link textStyle="navBarLink">Stake</Link>
-      </HStack>
+      </HStack> */}
 
       {/* Hiding this while is not live */}
       {/* <BigWhiteLink
@@ -48,7 +34,8 @@ export function NavBar() {
         Open dApp
       </BigWhiteLink> */}
 
-      <IconButton
+      {/* Hiding this while not live */}
+      {/* <IconButton
         onClick={onOpen}
         justifySelf={"flex-end"}
         aria-label="Navigation"
@@ -56,9 +43,10 @@ export function NavBar() {
         display={{ md: "none" }}
         bg="whiteAlpha.200"
         _hover={{ bg: "whiteAlpha.300" }}
-      />
+      /> */}
 
-      <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
+      {/* Hiding this while not live */}
+      {/* <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent bg="blue">
           <DrawerCloseButton color="white" />
@@ -79,14 +67,14 @@ export function NavBar() {
                 <Link textStyle="navBarLink">Stake</Link>
               </HStack>
 
-              {/* Hiding this while not live */}
-              {/* <BigWhiteLink justifySelf={"flex-end"} paddingX={3} paddingY={4}>
+              
+              <BigWhiteLink justifySelf={"flex-end"} paddingX={3} paddingY={4}>
                 Open dApp
-              </BigWhiteLink> */}
+              </BigWhiteLink>
             </Stack>
           </DrawerBody>
         </DrawerContent>
-      </Drawer>
+      </Drawer> */}
     </HStack>
   );
 }
