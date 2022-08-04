@@ -1,1 +1,3 @@
-export * from "./Pools";
+import { Pools } from "./Pools";
+
+export default Pools;

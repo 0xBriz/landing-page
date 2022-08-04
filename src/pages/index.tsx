@@ -1,11 +1,23 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import { Box, Flex, Skeleton } from "@chakra-ui/react";
 import { Container } from "../components/Container";
-import { DexContainer } from "../components/DexContainer";
-import { Ecosystem } from "../components/Ecosystem";
-import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { NavBar } from "../components/NavBar";
-import { Pools } from "../components/Pools";
+
+const Footer = dynamic(() => import("../components/Footer"), {
+  suspense: true,
+});
+
+const DexContainer = dynamic(() => import("../components/DexContainer"), {
+  suspense: true,
+});
+const Pools = dynamic(() => import("../components/Pools"), {
+  suspense: true,
+});
+const Ecosystem = dynamic(() => import("../components/Ecosystem"), {
+  suspense: true,
+});
 
 function BackgroundVideo() {
   return (
@@ -50,10 +62,13 @@ const Index = () => (
       }}
     >
       <Hero />
-      <DexContainer />
-      <Pools />
-      <Ecosystem />
-      <Footer />
+
+      <Suspense fallback={<Skeleton />}>
+        <DexContainer />
+        <Pools />
+        <Ecosystem />
+        <Footer />
+      </Suspense>
     </Flex>
   </Container>
 );

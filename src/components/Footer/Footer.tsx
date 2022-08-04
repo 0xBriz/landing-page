@@ -75,7 +75,7 @@ export function Footer() {
       <GridItem as={Flex} flexDirection="column" alignItems="flex-start">
         <Logo flex={1} alignItems="flex-start" marginBottom={4} />
         <Text>
-          Copyright © {new Date().getFullYear()} Aequinox.All rights reserved.
+          Copyright © {new Date().getFullYear()} Aequinox. All rights reserved.
         </Text>
       </GridItem>
 

@@ -1,4 +1,4 @@
-import { Heading, HStack, VStack } from "@chakra-ui/react";
+import { Heading, Text, VStack } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import { CountdownNumber } from "./CountdownNumber";
@@ -23,7 +23,7 @@ export function Countdown() {
   }
 
   return (
-    <VStack spacing={6}>
+    <VStack spacing={3}>
       <Heading
         as="h4"
         fontWeight={900}
@@ -32,14 +32,18 @@ export function Countdown() {
         letterSpacing="0.339em"
         color="white.200"
       >
-        Launching in
+        Launching
       </Heading>
 
-      <HStack spacing={3}>
+      <Text fontSize="4xl" fontWeight={900}>
+        8th August
+      </Text>
+
+      {/* <HStack spacing={3}>
         <CountdownNumber value={duration.days()} label="days" />
         <CountdownNumber value={duration.hours()} label="hours" />
         <CountdownNumber value={duration.minutes()} label="minutes" />
-      </HStack>
+      </HStack> */}
     </VStack>
   );
 }
