@@ -29,13 +29,13 @@ export function DexContainer() {
     >
       <Heading
         as="h2"
-        fontSize="5xl"
+        fontSize={{ base: "3xl", md: "5xl" }}
         fontWeight={900}
         paddingBottom={"72px"}
         textAlign="center"
         textShadow={"0px 2px 0px rgba(0, 0, 0, 0.25)"}
       >
-        What makes Aequinox great?
+        Aequinox: Self-Governed, Auto-Rebalancing Crypto Portfolios
       </Heading>
 
       <Flex width="100%" flexDirection="column" alignItems="center">
@@ -53,7 +53,7 @@ export function DexContainer() {
         >
           <DexReason
             index={0}
-            text="Amplify liquidity mining yield by up to 250%"
+            text="Amplify liquidity mining yield with up to 30% of all AEQ emissions"
             icon={chartIcon}
             visible={dexInView}
           />

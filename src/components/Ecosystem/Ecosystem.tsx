@@ -16,7 +16,7 @@ export function Ecosystem() {
     >
       <Heading
         as="h2"
-        fontSize="5xl"
+        fontSize={{ base: "3xl", md: "5xl" }}
         fontWeight={900}
         paddingBottom={"72px"}
         textAlign="center"

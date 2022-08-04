@@ -27,13 +27,13 @@ export function Pools() {
     >
       <Heading
         as="h2"
-        fontSize="5xl"
+        fontSize={{ base: "3xl", md: "5xl" }}
         fontWeight={900}
         paddingBottom={"72px"}
         textAlign="center"
         textShadow={"0px 2px 0px rgba(0, 0, 0, 0.25)"}
       >
-        Unique pool types for your needs
+        Unique pool types for limitless flexibility
       </Heading>
 
       <Grid
