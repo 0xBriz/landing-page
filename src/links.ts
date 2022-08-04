@@ -1,6 +1,6 @@
 export const DISCORD_HREF = "https://discord.gg/ames-aalto";
 export const MEDIUM_HREF = "https://medium.com/@Aalto_Protocol";
-export const TWITTER_HREF = "https://twitter.com/Aequinox_Matrix";
+export const TWITTER_HREF = "https://twitter.com/Aequinox_Dex";
 export const TELEGRAM_HREF = "https://t.me/aalto_protocol";
 export const AALTO_HREF = "https://aalto-protocol.com/";
 export const AMES_HREF = "https://www.ames-defi.app/";
