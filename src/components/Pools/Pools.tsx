@@ -65,7 +65,7 @@ export function Pools() {
           icon={poolsMulti}
           title="Multi-Token Pools"
           text="Create liquidity pools with up to 8 tokens and earn liquidity provider fees while holding a variety of crypto assets."
-          headingProps={{ flex: 1 }}
+          headingProps={{ flex: { base: "initial", md: 1 } }}
           visible={inView}
         />
         <PoolCard
