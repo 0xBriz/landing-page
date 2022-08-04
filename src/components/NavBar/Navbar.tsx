@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Drawer,
@@ -14,7 +13,7 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import { DAppButton } from "../DAppButton";
+import { BigWhiteLink } from "../BigWhiteLink";
 import { Logo } from "../Logo";
 
 export function NavBar() {
@@ -41,10 +40,12 @@ export function NavBar() {
         <Link textStyle="navBarLink">Stake</Link>
       </HStack>
 
-      <DAppButton
+      <BigWhiteLink
         justifySelf={"flex-end"}
         display={{ base: "none", md: "initial" }}
-      />
+      >
+        Open dApp
+      </BigWhiteLink>
 
       <IconButton
         onClick={onOpen}
@@ -77,7 +78,9 @@ export function NavBar() {
                 <Link textStyle="navBarLink">Stake</Link>
               </HStack>
 
-              <DAppButton justifySelf={"flex-end"} paddingX={3} paddingY={4} />
+              <BigWhiteLink justifySelf={"flex-end"} paddingX={3} paddingY={4}>
+                Open dApp
+              </BigWhiteLink>
             </Stack>
           </DrawerBody>
         </DrawerContent>

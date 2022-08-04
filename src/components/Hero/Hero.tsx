@@ -1,5 +1,7 @@
-import { Box, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react";
-import { DAppButton } from "../DAppButton";
+import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { DOCS_HREF } from "../../links";
+import { BigWhiteLink } from "../BigWhiteLink";
+import { Countdown } from "./Countdown";
 
 function BackgroundVideo() {
   return (
@@ -51,20 +53,12 @@ export function Hero() {
           vote to increase rewards.
         </Text>
 
-        <HStack spacing={6}>
-          <DAppButton />
-          <Link
-            justifySelf={"flex-end"}
-            paddingX={6}
-            paddingY={5}
-            bg="gray.800"
-            color="white.100"
-            borderRadius="12px"
-            fontWeight={500}
-          >
+        <VStack spacing={10}>
+          <Countdown />
+          <BigWhiteLink width="100%" href={DOCS_HREF} isExternal>
             Read docs
-          </Link>
-        </HStack>
+          </BigWhiteLink>
+        </VStack>
       </Flex>
     </Flex>
   );

@@ -1,6 +1,7 @@
 import { Flex, Heading, Stack } from "@chakra-ui/react";
 import aaltoBg from "../../../public/aalto-bg.png";
 import amesBg from "../../../public/ames-bg.png";
+import { AALTO_HREF, AMES_HREF } from "../../links";
 import { ProtocolCard } from "./ProtocolCard";
 
 export function Ecosystem() {
@@ -28,13 +29,13 @@ export function Ecosystem() {
           image={aaltoBg}
           title="Aalto Protocol"
           text="Aalto Protocol is the most advanced and sustainable auto-rebase protocol on the Binance Smart Chain, with auto-liquidity on every transaction, auto-burn every 24hrs, stablecoin payouts."
-          link="www.google.com"
+          link={AALTO_HREF}
         />
         <ProtocolCard
           image={amesBg}
           title="Ames.defi"
           text="Farm ASHARE and earn rewards in our seignorage stablecoin ecosystem."
-          link="www.google.com"
+          link={AMES_HREF}
         />
       </Stack>
     </Flex>

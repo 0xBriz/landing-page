@@ -2,12 +2,17 @@ import {
   Flex,
   Grid,
   GridItem,
-  HStack,
   Link,
   Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
+import {
+  DISCORD_HREF,
+  MEDIUM_HREF,
+  TELEGRAM_HREF,
+  TWITTER_HREF,
+} from "../../links";
 import { Logo } from "../Logo";
 
 function Pages() {
@@ -30,16 +35,22 @@ function Pages() {
         <Text fontWeight={900}>Core</Text>
         <Link isExternal>Trade</Link>
         <Link isExternal>Invest</Link>
-        <Link isExternal>&nbsp;</Link>
-        <Link isExternal>&nbsp;</Link>
       </VStack>
 
       <VStack spacing={4} alignItems="flex-start">
         <Text fontWeight={900}>Social</Text>
-        <Link isExternal>Discord</Link>
-        <Link isExternal>Twitter</Link>
-        <Link isExternal>Telegram</Link>
-        <Link isExternal>Medium</Link>
+        <Link href={DISCORD_HREF} isExternal>
+          Discord
+        </Link>
+        <Link href={TWITTER_HREF} isExternal>
+          Twitter
+        </Link>
+        <Link href={TELEGRAM_HREF} isExternal>
+          Telegram
+        </Link>
+        <Link href={MEDIUM_HREF} isExternal>
+          Medium
+        </Link>
       </VStack>
     </Stack>
   );

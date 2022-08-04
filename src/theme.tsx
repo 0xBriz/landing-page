@@ -34,6 +34,7 @@ const theme = extendTheme({
     purple: "#6C86E7",
     white: {
       100: "#F8F8F9",
+      200: "#E0E0E2",
     },
     gray: {
       800: "#1F1C2B",

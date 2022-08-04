@@ -1,7 +1,11 @@
+import { PropsWithChildren } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { LinkProps, Link } from "@chakra-ui/react";
 
-export function DAppButton(props: LinkProps) {
+export function BigWhiteLink({
+  children,
+  ...props
+}: PropsWithChildren<LinkProps>) {
   return (
     <Link
       paddingX={6}
@@ -12,7 +16,7 @@ export function DAppButton(props: LinkProps) {
       fontWeight={500}
       {...props}
     >
-      Open dApp
+      {children}
       <ArrowForwardIcon marginLeft={4} />
     </Link>
   );
