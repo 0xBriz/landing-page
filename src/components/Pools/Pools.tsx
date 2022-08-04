@@ -5,8 +5,18 @@ import poolsMulti from "../../../public/pools-multi.svg";
 import poolsSmart from "../../../public/pools-smart.svg";
 import poolsWeighted from "../../../public/pools-weighted.svg";
 import { PoolCard } from "./PoolCard";
+import { useRef } from "react";
+import { useIntersection } from "../../hooks";
 
 export function Pools() {
+  const intersectionRef = useRef(null);
+  const intersection = useIntersection(intersectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  });
+  const inView = intersection !== null && intersection.intersectionRatio >= 0.1;
+
   return (
     <Flex
       as="section"
@@ -27,6 +37,7 @@ export function Pools() {
       </Heading>
 
       <Grid
+        ref={intersectionRef}
         templateRows={{ base: "repeat(5, 1fr)", md: "repeat(3, 1fr)" }}
         templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
         columnGap="44px"
@@ -34,34 +45,44 @@ export function Pools() {
       >
         <PoolCard
           colSpan={1}
+          index={0}
           icon={poolsWeighted}
           title="Oracle Weighted Pools"
           text="Adjust the ratio of tokens according to which you would like to hold more of, while still earning liquidity provider fees."
+          visible={inView}
         />
         <PoolCard
           colSpan={1}
+          index={1}
           icon={poolsStable}
           title="Stable Pools"
           text="Hardcoded math that ensures price stability regardless of liquidity."
+          visible={inView}
         />
         <PoolCard
           colSpan={1}
+          index={2}
           icon={poolsMulti}
           title="Multi-Token Pools"
           text="Create liquidity pools with up to 8 tokens and earn liquidity provider fees while holding a variety of crypto assets."
           headingProps={{ flex: 1 }}
+          visible={inView}
         />
         <PoolCard
           colSpan={1}
+          index={3}
           icon={poolsLiquidity}
           title="Liquidity Bootstrapping Pools"
           text="Build on our platform with lower initial capital requirements that scale into higher liquidity across time."
+          visible={inView}
         />
         <PoolCard
           colSpan={{ base: 1, md: 2 }}
+          index={4}
           icon={poolsSmart}
           title="Smart Pools"
           text="Create liquidity pools with their own internal logic that act as trustless asset managers."
+          visible={inView}
         />
       </Grid>
     </Flex>

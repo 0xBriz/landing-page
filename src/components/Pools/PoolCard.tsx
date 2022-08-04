@@ -10,16 +10,20 @@ import {
 import { PoolImage } from "./PoolImage";
 
 interface PoolCardProps extends GridItemProps {
+  index: number;
   icon: any;
   title: string;
   text: string;
+  visible: boolean;
   headingProps?: HeadingProps;
 }
 
 export function PoolCard({
+  index,
   icon,
   title,
   text,
+  visible,
   headingProps = {},
   ...props
 }: PoolCardProps) {
@@ -29,6 +33,15 @@ export function PoolCard({
       flexDirection="column"
       alignItems="center"
       textAlign="center"
+      opacity={visible ? 1 : 0}
+      transform={
+        visible
+          ? "translateX(0)"
+          : `translateX(${index % 2 === 0 ? "-" : ""}75px)`
+      }
+      transition={`opacity 0.2s ease-in ${
+        index * 0.2
+      }s, transform 0.4s ease-in ${index * 0.2}s`}
       {...props}
     >
       <PoolImage src={icon} alt={title} />
