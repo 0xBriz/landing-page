@@ -19,7 +19,7 @@ export function Hero() {
       as="section"
       position="relative"
       width="100%"
-      height="calc(100vh - 128px)" // 100vh - navbar height
+      height="calc(100vh - 107px)" // 100vh - navbar height
       alignItems="center"
       justifyContent="center"
     >
@@ -30,7 +30,7 @@ export function Hero() {
         alignItems={"center"}
         zIndex={1}
         maxWidth="1100px"
-        paddingX={8}
+        paddingX={{ base: 0, sm: 8 }}
         textAlign="center"
       >
         <Heading
@@ -43,7 +43,7 @@ export function Hero() {
           Amplify your yield farming strategy with the Aequinox Dynamo
         </Heading>
         <Text
-          paddingBottom={8}
+          paddingBottom={{ base: 12, md: 8 }}
           fontSize="18px"
           maxWidth="860px"
           textShadow={"0px 1px 0px rgba(0, 0, 0, 0.25)"}

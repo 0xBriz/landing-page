@@ -15,7 +15,7 @@ const Index = () => (
       position="relative"
       boxSizing="content-box"
       flexDirection="column"
-      paddingX={8}
+      paddingX={{ base: 6, md: 8 }}
       paddingBottom={12}
       maxWidth="1110px"
       _after={{

@@ -8,6 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import {
+  AALTO_HREF,
+  AMES_HREF,
   DISCORD_HREF,
   MEDIUM_HREF,
   TELEGRAM_HREF,
@@ -23,18 +25,23 @@ function Pages() {
       justifyContent="space-between"
       spacing={8}
     >
-      <VStack spacing={4} alignItems="flex-start">
+      {/* Hiding this while not live */}
+      {/* <VStack spacing={4} alignItems="flex-start">
         <Text fontWeight={900}>Aequinox</Text>
         <Link isExternal>Trade</Link>
         <Link isExternal>Invest</Link>
         <Link isExternal>Stake</Link>
         <Link isExternal>Docs</Link>
       </VStack>
-
+      */}
       <VStack spacing={4} alignItems="flex-start">
-        <Text fontWeight={900}>Core</Text>
-        <Link isExternal>Trade</Link>
-        <Link isExternal>Invest</Link>
+        <Text fontWeight={900}>Ecosystem</Text>
+        <Link href={AMES_HREF} isExternal>
+          Ames.defi
+        </Link>
+        <Link href={AALTO_HREF} isExternal>
+          Aalto Protocol
+        </Link>
       </VStack>
 
       <VStack spacing={4} alignItems="flex-start">
@@ -61,7 +68,7 @@ export function Footer() {
     <Grid
       as="section"
       templateRows={{ base: "1fr", md: "1fr" }}
-      templateColumns={{ base: "1fr", md: "2fr 3fr" }}
+      templateColumns={{ base: "1fr", md: "4fr 2fr" }}
       columnGap="80px"
       rowGap={12}
     >

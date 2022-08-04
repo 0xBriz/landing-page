@@ -24,7 +24,7 @@ export function NavBar() {
       as="nav"
       width={"100%"}
       paddingY={8}
-      paddingX={10}
+      paddingX={{ base: 6, lg: 10 }}
       spacing={16}
       position="sticky"
       top={0}
@@ -40,12 +40,13 @@ export function NavBar() {
         <Link textStyle="navBarLink">Stake</Link>
       </HStack>
 
-      <BigWhiteLink
+      {/* Hiding this while is not live */}
+      {/* <BigWhiteLink
         justifySelf={"flex-end"}
         display={{ base: "none", md: "initial" }}
       >
         Open dApp
-      </BigWhiteLink>
+      </BigWhiteLink> */}
 
       <IconButton
         onClick={onOpen}
@@ -78,9 +79,10 @@ export function NavBar() {
                 <Link textStyle="navBarLink">Stake</Link>
               </HStack>
 
-              <BigWhiteLink justifySelf={"flex-end"} paddingX={3} paddingY={4}>
+              {/* Hiding this while not live */}
+              {/* <BigWhiteLink justifySelf={"flex-end"} paddingX={3} paddingY={4}>
                 Open dApp
-              </BigWhiteLink>
+              </BigWhiteLink> */}
             </Stack>
           </DrawerBody>
         </DrawerContent>
