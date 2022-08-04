@@ -11,7 +11,7 @@ export default class Document extends NextDocument {
           <meta property="og:url" content="https://www.aequinox.io" />
           <meta
             property="og:image"
-            content="https://landing-page-beryl-two.vercel.app/aequinox-metaimage.jpeg"
+            content="https://www.aequinox.io/aequinox-metaimage.jpeg"
           />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
