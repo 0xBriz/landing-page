@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
-const fonts = { body: "Satoshi", heading: "Satoshi" };
+const fonts = { body: "Satoshi, sans-serif", heading: "Satoshi, sans-serif" };
 
 const breakpoints = {
   sm: "40em",

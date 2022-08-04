@@ -5,7 +5,6 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <title>Aequinox</title>
           <meta property="og:title" content="Aequinox" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.aequinox.io" />
