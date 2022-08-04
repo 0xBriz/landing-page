@@ -16,7 +16,10 @@ export default class Document extends NextDocument {
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:description" content="" />
+          <meta
+            property="og:description"
+            content="Amplify your yield with the Aequinox Dynamo. Diversify your portfolio and direct emissions to your favourite liquidity pools with veAEQ gauge voting."
+          />
           <meta name="twitter:card" content="summary_large_image" />
 
           <link
