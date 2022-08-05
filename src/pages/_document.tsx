@@ -5,6 +5,11 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head>
+          <meta
+            name="description"
+            content="Amplify your yield with the Aequinox Dynamo. Diversify your portfolio and direct emissions to your favourite liquidity pools with veAEQ gauge voting. Defi, decentralized, exchange, yield farming, liquidity mining, crypto."
+          />
+
           <meta property="og:title" content="Aequinox" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.aequinox.io" />
