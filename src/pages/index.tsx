@@ -30,6 +30,7 @@ function BackgroundVideo() {
         playsInline
         height="100%"
         objectFit={{ base: "cover", sm: "cover" }}
+        margin="0 auto"
       >
         <source src="/aeq-video-background.mp4" />
       </Box>
