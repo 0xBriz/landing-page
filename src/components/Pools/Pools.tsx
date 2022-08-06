@@ -47,7 +47,7 @@ export function Pools() {
           colSpan={1}
           index={0}
           icon={poolsWeighted}
-          title="Oracle Weighted Pools"
+          title="Oracle Weighted"
           text="Adjust the ratio of tokens according to which you would like to hold more of, while still earning liquidity provider fees."
           visible={inView}
         />
@@ -55,7 +55,7 @@ export function Pools() {
           colSpan={1}
           index={1}
           icon={poolsStable}
-          title="Stable Pools"
+          title="Stable Math"
           text="Hardcoded math that ensures price stability regardless of liquidity."
           visible={inView}
         />
@@ -63,7 +63,7 @@ export function Pools() {
           colSpan={1}
           index={2}
           icon={poolsMulti}
-          title="Multi-Token Pools"
+          title="Multi-Token"
           text="Create liquidity pools with up to 8 tokens and earn liquidity provider fees while holding a variety of crypto assets."
           headingProps={{ flex: { base: "initial", md: 1 } }}
           visible={inView}
@@ -72,7 +72,7 @@ export function Pools() {
           colSpan={1}
           index={3}
           icon={poolsLiquidity}
-          title="Liquidity Bootstrapping Pools"
+          title="Liquidity Bootstrapping"
           text="Build on our platform with lower initial capital requirements that scale into higher liquidity across time."
           visible={inView}
         />
@@ -80,7 +80,7 @@ export function Pools() {
           colSpan={{ base: 1, md: 2 }}
           index={4}
           icon={poolsSmart}
-          title="Smart Pools"
+          title="Smart Permissionless"
           text="Create liquidity pools with their own internal logic that act as trustless asset managers."
           visible={inView}
         />
