@@ -22,7 +22,7 @@ export default class Document extends NextDocument {
           <meta property="og:image:height" content="630" />
           <meta
             property="og:description"
-            content="Amplify your yield with the Aequinox Dynamo. Diversify your portfolio and direct emissions to your favourite liquidity pools with veAEQ gauge voting."
+            content="Amplify your yield with the Aequinox Dynamo. Diversify your portfolio and direct emissions to your favourite liquidity pools with veAEQ gauge voting"
           />
           <meta name="twitter:card" content="summary_large_image" />
 
