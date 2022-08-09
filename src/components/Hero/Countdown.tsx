@@ -1,24 +1,12 @@
-import { Heading, Text, VStack } from "@chakra-ui/react";
-import dayjs from "dayjs";
-import duration from "dayjs/plugin/duration";
+import { Heading, HStack, VStack } from "@chakra-ui/react";
+import { getCountdown } from "../../utils";
 import { CountdownNumber } from "./CountdownNumber";
 
-dayjs.extend(duration);
-
-const COUNTDOWN_DATE = "2022-08-08T12:00:00Z";
-
 export function Countdown() {
-  const now = dayjs();
-  const countdown = dayjs(COUNTDOWN_DATE);
-  const duration = dayjs.duration(countdown.diff(now));
+  const { duration, hasLaunched } = getCountdown();
 
   // remove the counter once is launched
-  if (
-    duration.days() < 0 ||
-    duration.hours() < 0 ||
-    duration.minutes() < 0 ||
-    duration.seconds() < 0
-  ) {
+  if (hasLaunched) {
     return null;
   }
 
@@ -35,15 +23,11 @@ export function Countdown() {
         Launching
       </Heading>
 
-      <Text fontSize="3xl" fontWeight={900}>
-        8th August
-      </Text>
-
-      {/* <HStack spacing={3}>
+      <HStack spacing={3}>
         <CountdownNumber value={duration.days()} label="days" />
         <CountdownNumber value={duration.hours()} label="hours" />
         <CountdownNumber value={duration.minutes()} label="minutes" />
-      </HStack> */}
+      </HStack>
     </VStack>
   );
 }
