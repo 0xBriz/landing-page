@@ -4,7 +4,7 @@ import duration from "dayjs/plugin/duration";
 dayjs.extend(duration);
 
 // TODO: change date
-const COUNTDOWN_DATE = "2022-08-10T12:00:00Z";
+const COUNTDOWN_DATE = "2022-08-09T14:00:00Z";
 
 export function getCountdown() {
   const now = dayjs();
