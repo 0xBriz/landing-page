@@ -56,7 +56,7 @@ export function Hero() {
         </Text>
 
         <VStack spacing={10}>
-          <Countdown />
+          {/* <Countdown /> */}
           <BigWhiteLink width="100%" href={DOCS_HREF} isExternal>
             Read docs
           </BigWhiteLink>
