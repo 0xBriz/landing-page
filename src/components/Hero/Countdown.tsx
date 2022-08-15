@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { Heading, HStack, VStack } from "@chakra-ui/react";
-import { getCountdown } from "../../utils";
+import { useCountdown } from "../../utils";
 import { CountdownNumber } from "./CountdownNumber";
 
-export function Countdown() {
-  const { duration, hasLaunched } = getCountdown();
+export default function Countdown() {
+  const { duration, hasLaunched } = useCountdown();
 
   // remove the counter once is launched
   if (hasLaunched) {
@@ -24,9 +25,9 @@ export function Countdown() {
       </Heading>
 
       <HStack spacing={3}>
-        <CountdownNumber value={duration.days()} label="days" />
         <CountdownNumber value={duration.hours()} label="hours" />
         <CountdownNumber value={duration.minutes()} label="minutes" />
+        <CountdownNumber value={duration.seconds()} label="seconds" />
       </HStack>
     </VStack>
   );

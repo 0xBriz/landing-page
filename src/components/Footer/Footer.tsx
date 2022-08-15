@@ -19,11 +19,11 @@ import {
   TRADE_HREF,
   TWITTER_HREF,
 } from "../../links";
-import { getCountdown } from "../../utils";
+import { useCountdown } from "../../utils";
 import { Logo } from "../Logo";
 
 function Pages() {
-  const { hasLaunched } = getCountdown();
+  const { hasLaunched } = useCountdown();
 
   return (
     <Stack

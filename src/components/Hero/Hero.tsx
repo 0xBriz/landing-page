@@ -1,7 +1,11 @@
+import dynamic from "next/dynamic";
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import { DOCS_HREF } from "../../links";
 import { BigWhiteLink } from "../BigWhiteLink";
-import { Countdown } from "./Countdown";
+
+const Countdown = dynamic(() => import("./Countdown"), {
+  ssr: false,
+});
 
 export function Hero() {
   return (
