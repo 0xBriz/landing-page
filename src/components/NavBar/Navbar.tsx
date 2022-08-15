@@ -15,7 +15,7 @@ import {
   LinkProps,
 } from "@chakra-ui/react";
 import { DAPP_HREF, INVEST_HREF, STAKE_HREF, TRADE_HREF } from "../../links";
-import { getCountdown } from "../../utils";
+import { useCountdown } from "../../utils";
 import { BigWhiteLink } from "../BigWhiteLink";
 import { Logo } from "../Logo";
 
@@ -45,7 +45,7 @@ function OpenAppBtn(props: LinkProps) {
 
 export function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { hasLaunched } = getCountdown();
+  const { hasLaunched } = useCountdown();
 
   return (
     <HStack

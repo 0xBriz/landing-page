@@ -1,22 +1,28 @@
+import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
+import { useInterval } from "react-use";
 
 dayjs.extend(duration);
 
-// TODO: change date
-const COUNTDOWN_DATE = "2022-12-09T14:00:00Z";
+const COUNTDOWN_DATE = "2022-08-15T18:00:00Z";
 
-export function getCountdown() {
+export function useCountdown() {
   const now = dayjs();
   const countdown = dayjs(COUNTDOWN_DATE);
   const duration = dayjs.duration(countdown.diff(now));
+  const [time, setTime] = useState(duration);
+
+  useInterval(() => {
+    setTime(dayjs.duration(countdown.diff(now)));
+  }, 1000);
 
   return {
-    duration,
+    duration: time,
     hasLaunched:
-      duration.days() < 0 ||
-      duration.hours() < 0 ||
-      duration.minutes() < 0 ||
-      duration.seconds() < 0,
+      time.days() < 0 ||
+      time.hours() < 0 ||
+      time.minutes() < 0 ||
+      time.seconds() < 0,
   };
 }
