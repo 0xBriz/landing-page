@@ -5,7 +5,7 @@ import { useInterval } from "react-use";
 
 dayjs.extend(duration);
 
-const COUNTDOWN_DATE = "2022-08-15T13:00:00Z";
+const COUNTDOWN_DATE = "2022-08-15T18:00:00Z";
 
 export function useCountdown() {
   const now = dayjs();
