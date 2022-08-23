@@ -15,7 +15,6 @@ import {
   LinkProps,
 } from "@chakra-ui/react";
 import { DAPP_HREF, INVEST_HREF, STAKE_HREF, TRADE_HREF } from "../../links";
-import { useCountdown } from "../../utils";
 import { BigWhiteLink } from "../BigWhiteLink";
 import { Logo } from "../Logo";
 
@@ -45,7 +44,6 @@ function OpenAppBtn(props: LinkProps) {
 
 export function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { hasLaunched } = useCountdown();
 
   return (
     <HStack
@@ -62,46 +60,42 @@ export function NavBar() {
     >
       <Logo />
 
-      {/* TODO: Hiding this while not live */}
-      {hasLaunched && (
-        <>
-          <Menu display={{ base: "none", md: "initial" }} />
-          <OpenAppBtn display={{ base: "none", md: "initial" }} />
+      <Menu display={{ base: "none", md: "initial" }} />
+      <OpenAppBtn display={{ base: "none", md: "initial" }} />
 
-          <IconButton
-            onClick={onOpen}
-            justifySelf={"flex-end"}
-            aria-label="Navigation"
-            icon={<HamburgerIcon />}
-            display={{ md: "none" }}
-            bg="whiteAlpha.200"
-            _hover={{ bg: "whiteAlpha.300" }}
-          />
+      <IconButton
+        onClick={onOpen}
+        justifySelf={"flex-end"}
+        aria-label="Navigation"
+        icon={<HamburgerIcon />}
+        display={{ md: "none" }}
+        bg="whiteAlpha.200"
+        _hover={{ bg: "whiteAlpha.300" }}
+      />
 
-          <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
-            <DrawerOverlay />
-            <DrawerContent bg="blue">
-              <DrawerCloseButton color="white" />
-              <DrawerHeader>&nbsp;</DrawerHeader>
+      <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
+        <DrawerOverlay />
+        <DrawerContent bg="blue">
+          <DrawerCloseButton color="white" />
+          <DrawerHeader>&nbsp;</DrawerHeader>
 
-              <DrawerBody>
-                <Stack
-                  direction={{ base: "column", sm: "row" }}
-                  spacing={{ base: 8, sm: 8 }}
-                  paddingX={4}
-                  paddingY={2}
-                  alignItems="center"
-                  justifyContent={{ base: "initial", sm: "space-between" }}
-                >
-                  <Menu color="white" />
+          <DrawerBody>
+            <Stack
+              direction={{ base: "column", sm: "row" }}
+              spacing={{ base: 8, sm: 8 }}
+              paddingX={4}
+              paddingY={2}
+              alignItems="center"
+              justifyContent={{ base: "initial", sm: "space-between" }}
+            >
+              <Menu color="white" />
 
-                  <OpenAppBtn paddingX={3} paddingY={4} />
-                </Stack>
-              </DrawerBody>
-            </DrawerContent>
-          </Drawer>
-        </>
-      )}
+              <OpenAppBtn paddingX={3} paddingY={4} />
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+       
     </HStack>
   );
 }
