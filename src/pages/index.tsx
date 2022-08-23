@@ -21,7 +21,7 @@ const Ecosystem = dynamic(() => import("../components/Ecosystem"), {
 
 function BackgroundVideo() {
   return (
-    <Box position="absolute" top={0} left={0} width="100vw" height="100vh">
+    <Box position="absolute" top={0} left={0} width="100%" height="100vh">
       <Box
         as="video"
         autoPlay

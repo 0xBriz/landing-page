@@ -1,11 +1,6 @@
-import dynamic from "next/dynamic";
-import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
-import { DOCS_HREF } from "../../links";
+import { Flex, Heading, Text, Link, Stack } from "@chakra-ui/react";
+import { DAPP_HREF, DOCS_HREF } from "../../links";
 import { BigWhiteLink } from "../BigWhiteLink";
-
-const Countdown = dynamic(() => import("./Countdown"), {
-  ssr: false,
-});
 
 export function Hero() {
   return (
@@ -55,12 +50,15 @@ export function Hero() {
           liquidity pools with veAEQ gauge voting.
         </Text>
 
-        <VStack spacing={10}>
-          <Countdown />
-          <BigWhiteLink width="100%" href={DOCS_HREF} isExternal>
-            Read docs
+        <Stack direction={{ base: 'column', sm: 'row' }}  spacing={3}>
+          <BigWhiteLink width="166px" href={DAPP_HREF} isExternal>
+            Open dApp
           </BigWhiteLink>
-        </VStack>
+
+          <Link width="166px" py={5} px={6} bg="gray.800" _hover={{ bg: "gray.900" }} borderRadius={'12px'} href={DOCS_HREF} isExternal>
+            Read docs
+          </Link>
+        </Stack>
       </Flex>
     </Flex>
   );

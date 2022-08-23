@@ -19,11 +19,9 @@ import {
   TRADE_HREF,
   TWITTER_HREF,
 } from "../../links";
-import { useCountdown } from "../../utils";
 import { Logo } from "../Logo";
 
 function Pages() {
-  const { hasLaunched } = useCountdown();
 
   return (
     <Stack
@@ -32,24 +30,22 @@ function Pages() {
       justifyContent="space-between"
       spacing={8}
     >
-      {hasLaunched && (
-        <VStack spacing={4} alignItems="flex-start">
-          <Text fontWeight={900}>Aequinox</Text>
-          <Link isExternal href={TRADE_HREF}>
-            Trade
-          </Link>
-          <Link isExternal href={INVEST_HREF}>
-            Invest
-          </Link>
-          <Link isExternal href={STAKE_HREF}>
-            Stake
-          </Link>
-          <Link isExternal href={DOCS_HREF}>
-            Docs
-          </Link>
-        </VStack>
-      )}
-
+      <VStack spacing={4} alignItems="flex-start">
+        <Text fontWeight={900}>Aequinox</Text>
+        <Link isExternal href={TRADE_HREF}>
+          Trade
+        </Link>
+        <Link isExternal href={INVEST_HREF}>
+          Invest
+        </Link>
+        <Link isExternal href={STAKE_HREF}>
+          Stake
+        </Link>
+        <Link isExternal href={DOCS_HREF}>
+          Docs
+        </Link>
+      </VStack>
+    
       <VStack spacing={4} alignItems="flex-start">
         <Text fontWeight={900}>Ecosystem</Text>
         <Link href={AMES_HREF} isExternal>
